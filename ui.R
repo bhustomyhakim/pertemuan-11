@@ -46,7 +46,7 @@ server <- function(input, output) {
   # Render the plot
   output$plot <- renderPlot({
     ggplot(plotData(), aes(x = x, y = y)) +
-      geom_point() +
+      geom_line() +
       labs(title = paste("Scatter plot of", input$dataset))
   })
 }
